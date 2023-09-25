@@ -1,17 +1,33 @@
-import react from "react";
-import CardList from "../components/CardList";
-import { exploreList } from "../constants/MockupData";
+import React, { useEffect, useState } from 'react';
 import '../styles/Explore.css';
-import Header from "../components/Header";
-import Search from "../components/Search";
+import Header from '../components/Header';
+import AllProducts from './AllProducts';
+import axios from 'axios';
+
 const Explore = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchedProducts = async () => {
+      try {
+        const response = await axios.get('http://localhost:4000/products');
+        if (Array.isArray(response.data)) {
+          setProducts(response.data);
+          console.log(products);
+        } else {
+          console.error('Unexpected data format received:', response.data);
+        }
+      } catch (error) {
+        console.log(`Error fething products: ${error}`);
+      }
+    };
+    fetchedProducts();
+  }, []);
   return (
     <div id="explore">
       <Header />
-      <Search/>
-      <div id="list-container">
-        <CardList list={exploreList} />
-      </div>
+
+      <AllProducts list={products} />
     </div>
   );
 };

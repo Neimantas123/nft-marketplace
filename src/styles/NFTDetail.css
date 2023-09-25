@@ -1,242 +1,306 @@
-#nft-detail-card-wrapper{
-    width:100%;
-    height:100%;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    padding-top:50px;
+@font-face {
+  font-family: 'Messapia-bold';
+  src: local('Messapia-bold'),
+    url('../../public/fonts/Messapia-Bold.woff2') format('woff2'),
+    url('../../public/fonts/Messapia-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-#detail-content{
-    width:100%;
-    height:100%;
-    /* border:1px solid red; */
-    display:flex;
-    flex-direction:row;
+#nft-detail-card-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+  padding-bottom: 50px;
+  background: #fff;
 }
 
-#detail-image{
-    width:60%;
-    height:100%;
-    object-fit:cover;
-    border-radius:30px;
+#detail-content {
+  height: calc(100% - 40px);
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  padding: 20px;
 }
-model-viewer#arDetail{
-    width:60%;
-    height:100%;
+
+#detail-image {
+  width: 42%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 30px;
 }
-#detail-info{
-    width:40%;
-    height:100%;
-    /* border:1px solid green; */
+model-viewer#arDetail {
+  width: 60%;
+  height: 100%;
+}
+#detail-info {
+  width: 50%;
+  padding-left: 15px;
+  height: 100%;
+  /* border:1px solid green; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#detail-info-container {
+  width: 100%;
+  height: 90%;
+  /* border:1px solid red; */
+  margin-bottom: 20px;
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+
+p#name {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #ffffff;
+  font-size: 30px;
+  margin-top: 10px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+p#collection {
+  font-family: 'Messapia-bold', fallback-fonts, sans-serif !important;
+  color: #000;
+  font-size: 16px;
+  margin-top: 30px;
+  text-align: left;
+  padding-bottom: 35px;
+}
+
+p.composition-description,
+.space-between {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  padding-bottom: 20px;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+  color: #696969;
+  text-align: left;
+}
+
+p#description {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #000;
+  font-size: 18px;
+  margin-top: 32px;
+  text-align: left;
+  padding-left: 20px;
+  line-height: 28px;
+  font-weight: 300;
+}
+
+#detail-controls {
+  width: 100%;
+  height: 50px;
+  /* border:1px solid red; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#button-child {
+  width: 100%;
+  height: 100%;
+  /* border:1px solid cyan; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+}
+#button-child > p#price {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.like-container > p.like-count {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.like-container {
+  display: flex;
+  flex-direction: row;
+  margin-right: 10px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.like {
+  /* width: 30px; */
+  /* height: 30px; */
+  margin-right: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+}
+
+#more-nft-container {
+  width: calc(60vw - 250px);
+  display: flex;
+  flex-direction: row;
+  /* border:1px solid red; */
+  overflow-y: hidden;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: auto;
+  margin-top: 30px;
+  margin-bottom: 50px;
+
+  padding-right: 35px;
+  align-items: center;
+}
+
+#more-nft-list-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 1000px) {
+  .card {
+    height: auto !important;
+    margin-top: 80px;
+    width: 80% !important;
+  }
+
+  #nft-detail-card-wrapper {
+    height: 60%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
-
-#detail-info-container{
-    width:100%;
-    height:90%;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+  }
+  #detail-image {
+    min-height: auto !important;
+    object-fit: cover;
+    border-radius: 30px;
+    margin: auto;
+  }
+  model-viewer#arDetail {
+    width: 100%;
+    height: 350px !important;
+  }
+  #detail-content {
+    width: 80%;
+    height: 100%;
     /* border:1px solid red; */
-    margin-bottom:20px;
-    overflow:hidden;
-    padding-bottom:20px;
-}
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
 
- p#name {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    color:#ffffff;
+  p#name {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #ffffff;
     font-size: 30px;
     margin-top: 10px;
     text-align: left;
-    padding-left: 20px;
-}
-
- p#collection {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    color:#C6C2C6;
-    font-size: 18px;
-    margin-top: 15px;
-    text-align: left;
-    padding-left: 20px;
-
-}
-
-p#description{
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    color:#C6C2C6;
-    font-size: 18px;
+    padding-left: 10px;
+  }
+  p#description {
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    overflow: hidden;
     margin-top: 32px;
     text-align: left;
     padding-left: 20px;
     line-height: 28px;
     font-weight: 300;
-}
-
-#detail-controls{
-    width:100%;
-    height:50px;
-    /* border:1px solid red; */
+  }
+  #detail-info {
+    width: 100%;
+    height: auto;
+    /* border:1px solid green; */
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-#button-child{
-    width:100%;
-    height:100%;
-    /* border:1px solid cyan; */
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-#button-child > p#price{
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-size:18px;
-    font-weight: 600;
-}
-
-.like-container > p.like-count{
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-size:20px;
-    font-weight: 600;
-}
-
-.like-container{
-    display: flex;
-    flex-direction: row;
-    margin-right: 10px;
-    text-align:center;
-    justify-content:center;
-    align-items: center;
-}
-
-
-.like{
-    /* width: 30px; */
-    /* height: 30px; */
-    margin-right: 10px;
-    background-color: transparent;
-    border:none;
-    cursor:pointer;
-    display:flex;
-    flex-direction: row;
-}
-
-#more-nft-container{
-    width: calc(60vw - 250px);
-    display: flex;
-    flex-direction: row;
-    /* border:1px solid red; */
-    overflow-y: hidden;
-    overflow-x: scroll;
-    -webkit-overflow-scrolling: auto;
-    margin-top: 30px; 
-    margin-bottom: 50px;
-
-    padding-right: 35px;
-    align-items: center;
-    
-}
-
-#more-nft-list-wrapper{
-    display: flex;
-    flex-direction: row;
-}
-
-
-@media screen and (max-width: 1000px) {
-    #nft-detail-card-wrapper{
-        width:100%;
-        height:60%;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        justify-content:center;
-        padding-top:50px;
-    }
-    #detail-image{
-        width:100%;
-        height:350px !important;
-        object-fit:cover;
-        border-radius:30px;
-    }
-    model-viewer#arDetail{
-        width:100%;
-        height:350px !important;
-    }
-    #detail-content{
-        width:100%;
-        height:100%;
-        /* border:1px solid red; */
-        display:flex;
-        flex-direction:column;
-        padding-bottom: 20px;
-    }
-    p#collection {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-        color:#C6C2C6;
-        font-size: 18px;
-        margin-top: 15px;
-        text-align: left;
-        padding-left: 10px;
-    
-    }
-    p#name {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-        color:#ffffff;
-        font-size: 30px;
-        margin-top: 10px;
-        text-align: left;
-        padding-left: 10px;
-    }
-    p#description{
-        word-wrap: break-word;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        margin-top: 32px;
-        text-align: left;
-        padding-left: 20px;
-        line-height: 28px;
-        font-weight: 300;
-    }
-    #detail-info{
-        width:100%;
-        height:500px;
-        /* border:1px solid green; */
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    #detail-info-container{
-        width:100%;
-        height: 310px;
-        /* border:1px solid green; */
-        margin-bottom:20px;
-        overflow:hidden;
-        padding-bottom:20px;
-        /* word-wrap: break-word;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #detail-info-container {
+    width: 100%;
+    height: auto;
+    /* border:1px solid green; */
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    /* word-wrap: break-word;
         word-break:'ellipsis-vertical' !important; */
-        white-space: pre-line;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    
-    #detail-controls{
-        width:100%;
-        height:50px;
-        /* border:1px solid red; */
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
+    white-space: pre-line;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  #detail-controls {
+    width: 100%;
+    height: 50px;
+    /* border:1px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+button#wiew {
+  width: 120px;
+  border-radius: 5px;
+  font-size: 14px;
+  border: none;
+  font-family: 'Messapia-bold', fallback-fonts, sans-serif !important;
+  background: none;
+  color: #000;
+  cursor: pointer;
+  border: 2px solid #000;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+button#wiew:hover {
+  background: rgb(131, 54, 255);
+  border-color: rgb(131, 54, 255);
+  color: #fff;
+}
+
+span.close a {
+  position: absolute;
+  top: 5px;
+  right: 11px;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: Messapia-bold, fallback-fonts, sans-serif !important;
+  font-size: 25px;
+}
+
+.pass-link {
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  padding-bottom: 20px;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+  color: #696969;
+  text-align: left;
 }

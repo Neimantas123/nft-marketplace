@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Messapia-bold';
+  src: local('Messapia-bold'),
+    url('../../../public/fonts/Messapia-Bold.woff2') format('woff2'),
+    url('../../../public/fonts/Messapia-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.all-products-block {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-bottom: 50px;
+  justify-content: center;
+}
+
+h2.all-products {
+  margin-top: 150px;
+  color: #000;
+  font-family: 'Messapia-bold', fallback-fonts, sans-serif !important;
+  font-size: 30px;
+  text-align: center;
+}

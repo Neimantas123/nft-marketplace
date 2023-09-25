@@ -1,16 +1,25 @@
-.default-button {
-    border:none;
-    background-color: transparent;
-    color:#ffffff;
-    border:1px solid #ffffff;
-    border-radius: 15px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    cursor:pointer;
-    padding:2px;
+@font-face {
+  font-family: 'Messapia-bold';
+  src: local('Messapia-bold'),
+    url('/public/fonts/Messapia-Bold.woff2') format('woff2'),
+    url('/public/fonts/Messapia-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-.default-button:hover{
-    color:black;
-    background-color: #ffffff;
+.default-button {
+  border: none;
+  background-color: transparent;
+  color: #000 !important;
+  border: 1px solid #ffffff;
+  border-radius: 15px;
+  font-family: 'Messapia-bold', fallback-fonts, sans-serif;
+  cursor: pointer;
+  text-align: left;
+  font-size: 13px;
+}
+
+.default-button:hover {
+  color: black;
+  background-color: #ffffff;
 }

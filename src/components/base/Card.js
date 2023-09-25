@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import "../../styles/base/Card.css";
+import React, { useState } from 'react';
+import '../../styles/base/Card.css';
 
 const Card = React.forwardRef(
   (
     {
-      width = "250px",
-      height = "300px",
+      width = '250px',
+      height = 'auto',
       child,
-      blurColor = "rgba(48,118,234,0.2)",
+      blurColor = 'rgba(48,118,234,0.2)',
       onClick,
     },
     ref

@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'Messapia-bold';
+  src: local('Messapia-bold'),
+    url('../../public/fonts/Messapia-Bold.woff2') format('woff2'),
+    url('../../public/fonts/Messapia-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.about-block {
+  margin-top: 150px;
+  display: flex;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.about-text-block {
+  width: 60%;
+  position: relative;
+}
+
+.about-text-block h2 {
+  color: #000;
+  font-family: 'Messapia-bold', fallback-fonts, sans-serif !important;
+  font-size: 30px;
+}
+
+.about-img-block {
+  width: 40%;
+}
+
+.digital-block-p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  padding-bottom: 20px;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+  color: #696969;
+}
+
+.about-img-block img {
+  width: 100%;
+}
+
+img.logo-digital-bottom {
+  max-width: 300px;
+  position: absolute;
+  bottom: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  .about-img-block {
+    display: none;
+  }
+  .about-text-block {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .about-block {
+    min-height: 60vh;
+  }
+}
